@@ -1,5 +1,7 @@
 package codes;
 
+import java.util.Scanner;
+
 public class MainDrive {
 	
 	public static void main(String[] args) {
@@ -46,6 +48,37 @@ public class MainDrive {
 		for (int num : questionNumArr) {
 			System.out.println(num);
 		}
+		
+		
+//		정답을 맞출때까지 계속 숫자를 입력받자.
+//		Scanner 한번 만들고 => 계속 활용.
+		
+		Scanner myScanner = new Scanner(System.in);
+		
+		
+//		입력값을 담아줄 배열
+		int[] inputNumberArr = new int[3];
+		
+		while (true) {
+			
+			System.out.print("3자리 숫자 입력 : ");
+			int num = myScanner.nextInt();
+			
+//			입력받은 숫자를 567 => 5,6,7 세칸 배열로 쪼개주자.
+			
+//			배열[0] => 100의자리. [1] => 10의자리. [2] => 1의 자리.
+//			전제 : 세자리 숫자를 잘 입력했다.
+			
+//			100의자리 : 숫자를 100으로 나눈 몫?
+			inputNumberArr[0] = num / 100;
+			
+			
+			
+			
+		}
+		
+
+		
 		
 	}
 
