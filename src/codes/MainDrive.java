@@ -119,6 +119,16 @@ public class MainDrive {
 			
 			System.out.println(strikeCount + "S " + ballCount + "B 입니다.");
 			
+			if (strikeCount == 3) {
+//				3S 가 맞다면 => 축하메세지 출력
+//				while문 깨고 탈출. => 프로그램 종료.
+				
+				System.out.println("축하합니다.!");
+				
+				break;
+				
+			}
+			
 			
 		}
 		
