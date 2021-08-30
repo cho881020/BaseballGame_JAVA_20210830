@@ -72,7 +72,52 @@ public class MainDrive {
 //			100의자리 : 숫자를 100으로 나눈 몫?
 			inputNumberArr[0] = num / 100;
 			
+//			10의 자리 : 567 => 5"6"  : 1의 자리 추출
+			inputNumberArr[1] = (num / 10)  % 10; 
 			
+//			1의 자리 : 567 => 7  : 숫자를 10으로 나눈 나머지.
+			inputNumberArr[2] = num % 10;
+			
+			
+//			s : 몇개?, b : 몇개? 구해주자.
+//			갯수 => 0개 출발, 발견할때마다 ++
+			
+			int strikeCount = 0;
+			int ballCount = 0;
+			
+			
+//			내 숫자 하나를 들고 -> 문제 숫자 3자리 검토.  3번 반복.
+			
+//			같은 숫자를 찾으면 => 위치 (index) 도 같은가? => index 변수 필요.
+			
+			for ( int i=0; i < inputNumberArr.length ; i++) {
+				
+				for (int j=0 ; j < questionNumArr.length ; j++) {
+					
+//					지금 보는 내 입력 숫자와, 문제의 숫자가 서로 같은가?
+					if (inputNumberArr[i] == questionNumArr[j]) {
+						
+//						같다! => S/B 추가 질문. => index도 같은가?
+						if (i == j) {
+//							숫자도 / 위치도 같다.
+//							strike 하나 발견.
+							strikeCount++;
+						}
+						else {
+//							숫자는 같지만 / 위치는 다르다.
+//							ball 하나 발견.
+							ballCount++;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+//			?S ?B 출력.
+			
+			System.out.println(strikeCount + "S " + ballCount + "B 입니다.");
 			
 			
 		}
