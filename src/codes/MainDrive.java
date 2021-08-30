@@ -59,10 +59,17 @@ public class MainDrive {
 //		입력값을 담아줄 배열
 		int[] inputNumberArr = new int[3];
 		
+		
+//		총 답안 입력 횟수를 저장할 변수. (한번 입력시마다 ++)
+		int inputCount = 0;
+		
 		while (true) {
 			
 			System.out.print("3자리 숫자 입력 : ");
 			int num = myScanner.nextInt();
+			
+//			1회 입력 추가.
+			inputCount++;
 			
 //			입력받은 숫자를 567 => 5,6,7 세칸 배열로 쪼개주자.
 			
@@ -124,6 +131,9 @@ public class MainDrive {
 //				while문 깨고 탈출. => 프로그램 종료.
 				
 				System.out.println("축하합니다.!");
+				
+//				몇번만에 맞췄는지도 같이 출력.
+				System.out.println(inputCount + "회 만에 정답을 맞췄습니다.");
 				
 				break;
 				
